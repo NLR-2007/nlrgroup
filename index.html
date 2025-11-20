@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NLR GROUP OF COMPANIES</title>
+
+  <!-- Smooth Scroll -->
+  <style>
+    html { scroll-behavior: smooth; }
+    * {margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI', sans-serif;}
+    body {background:#050505; color:#eaeaea; overflow-x:hidden;}
+
+    :root { --neon-blue:#00bfff; --neon-purple:#6a5acd; --neon-pink:#ff1493; }
+
+    /* Animated Background */
+    #bg-animation {
+      position: fixed;
+      top:0; left:0;
+      width:100%; height:100%;
+      z-index:-1;
+      background: radial-gradient(circle, #0a0a0a, #000);
+      overflow:hidden;
+    }
+    .circle {
+      position:absolute;
+      width:20px; height:20px;
+      border-radius:50%;
+      background:var(--neon-blue);
+      box-shadow:0 0 20px var(--neon-blue);
+      opacity:0.5;
+      animation: floatUp linear infinite;
+    }
+    @keyframes floatUp {
+      from { transform: translateY(100vh) scale(0.5); }
+      to { transform: translateY(-20vh) scale(1.2); }
+    }
+
+    /* NAVBAR */
+    .about-box {background:rgba(255,255,255,0.03); padding:40px; border-radius:14px; border:1px solid rgba(255,255,255,0.12); box-shadow:0 0 25px rgba(0,0,0,0.4); backdrop-filter:blur(6px);}
+    header {position:fixed; top:0; width:100%; padding:18px 50px; background:rgba(0,0,0,0.65); backdrop-filter:blur(10px); display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.1); z-index:100;}
+    header h1 {font-size:26px; font-weight:800; letter-spacing:1px; color:var(--neon-blue); text-shadow:0 0 12px var(--neon-blue);}    
+    nav a {margin-left:30px; color:#ccc; text-decoration:none; font-size:15px; transition:.3s;}    
+    nav a:hover {color:var(--neon-pink); text-shadow:0 0 8px var(--neon-pink);}    
+
+    /* HERO */
+    .hero {height:100vh; display:flex; justify-content:center; align-items:center; text-align:center; padding:20px; position:relative;}
+    .hero h2 {font-size:54px; font-weight:900; letter-spacing:1px; color:var(--neon-blue); text-shadow:0 0 20px var(--neon-blue);}    
+    .hero p {margin-top:20px; font-size:18px; color:#bbb; line-height:1.6;}    
+    .btn {margin-top:30px; display:inline-block; padding:12px 32px; border:2px solid var(--neon-pink); color:var(--neon-pink); border-radius:8px; text-decoration:none; font-weight:600; transition:.3s;}
+    .btn:hover {background:var(--neon-pink); color:#000; box-shadow:0 0 20px var(--neon-pink);}    
+
+    /* SECTIONS */
+    section {padding:100px 50px; max-width:1200px; margin:auto; opacity:0; transform:translateY(40px); transition:1s ease;} /* fade-in base */
+    section.visible {opacity:1; transform:translateY(0);} /* fade-in active */
+
+    /* Parallax */
+    .parallax {background-attachment:fixed; background-size:cover; background-position:center;}
+
+    /* Titles */
+    h2.section-title {text-align:center; font-size:34px; color:var(--neon-purple); text-shadow:0 0 12px var(--neon-purple); margin-bottom:50px;}
+
+    /* CARDS */
+    .grid {display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:30px;}
+    .card {padding:35px; background:rgba(255,255,255,0.04); border-radius:14px; border:1px solid rgba(255,255,255,0.12); transition:.4s; backdrop-filter:blur(6px);}
+    .card:hover {transform:translateY(-8px); box-shadow:0 0 25px var(--neon-blue);}    
+    .card h3 {color:var(--neon-blue); margin-bottom:10px; text-shadow:0 0 8px var(--neon-blue);}    
+
+    footer {text-align:center; padding:25px; background:#000; border-top:1px solid rgba(255,255,255,0.1); color:#777; margin-top:60px;}
+  </style>
+</head>
+
+<body>
+  <div id="bg-animation"></div>
+
+  <!-- NAVBAR -->
+  <header>
+    <h1>NLR GROUP OF COMPANIES</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#vision">Vision</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div>
+      <h2 id="typing"></h2>
+      <p>Founded in 2023 • Led by CEO Nimma Lokesh Reddy<br>Product + Service Based Tech Company Building the Future.</p>
+      <a class="btn" href="#contact">Connect With Us</a>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2 class="section-title">About NLR</h2>
+    <div class="about-box">
+      <p>
+        NLR Group of Companies is a visionary, innovation-driven organization founded in 2023.
+        Led by <b>Nimma Lokesh Reddy</b>, NLR builds powerful digital solutions for global impact.
+      </p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <h2 class="section-title">What We Do</h2>
+    <div class="grid">
+      <div class="card"><h3>Custom Web & App Development</h3><p>Advanced, responsive applications built for performance.</p></div>
+      <div class="card"><h3>Product Innovation</h3><p>Crafting branded digital experiences end-to-end.</p></div>
+      <div class="card"><h3>E-Commerce</h3><p>Creators of Pusthak Ghar — India's unique cultural stationery store.</p></div>
+      <div class="card"><h3>Tech for Social Impact</h3><p>FDAS, AgriNauts & sustainable solutions.</p></div>
+      <div class="card"><h3>AI Chatbots</h3><p>Next-gen conversational systems.</p></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2 class="section-title">Our Key Projects</h2>
+    <div class="grid">
+      <div class="card"><h3>Pusthak Ghar</h3><p>Student-focused stationery platform.</p></div>
+      <div class="card"><h3>FDAS</h3><p>Food Distribution Automation System.</p></div>
+      <div class="card"><h3>AgriNauts</h3><p>AI precision Agriculture.</p></div>
+      <div class="card"><h3>AI Bots</h3><p>Smart conversational agents.</p></div>
+    </div>
+  </section>
+
+  <!-- VISION -->
+  <section id="vision" class="parallax" style="background-image:url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee'); background-size:cover; background-position:center;">
+    <h2 class="section-title">Our Vision</h2>
+    <div class="about-box">
+      <p>
+        Every decision today shapes the world of tomorrow. Our mission is to merge technology,
+        education, and empathy to build a smarter and more inclusive future.
+      </p>
+    </div>
+  </section>
+
+  <!-- TEAM SECTION -->
+  <section id="team">
+    <h2 class="section-title">Our Team</h2>
+    <div class="grid">
+
+      <div class="card" style="text-align:center;">
+        
+        <img src="https://i.ibb.co/ZYy9y9T/default-avatar.png" alt="CEO" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px; box-shadow:0 0 15px var(--neon-blue);">
+        <h3>Nimma Lokesh Reddy</h3>
+        <p style="color:#ccc;">Co-Founder & CEO</p>
+        <p style="margin-top:10px; font-size:14px; color:#aaa;">Visionary leader driving innovation, strategy, and next‑gen product development at NLR.</p>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <img src="https://i.ibb.co/ZYy9y9T/default-avatar.png" alt="CTO" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px; box-shadow:0 0 15px var(--neon-purple);">
+        <h3>Team Member</h3>
+        <p style="color:#ccc;">CTO / Tech Lead</p>
+        <p style="margin-top:10px; font-size:14px; color:#aaa;">Responsible for technical architecture, AI solutions, and platform engineering.</p>
+      </div>
+
+      <div class="card" style="text-align:center;">
+        <img src="https://i.ibb.co/ZYy9y9T/default-avatar.png" alt="Designer" style="width:120px; height:120px; border-radius:50%; margin-bottom:15px; box-shadow:0 0 15px var(--neon-blue);">
+        <h3>Team Member</h3>
+        <p style="color:#ccc;">UI/UX Designer</p>
+        <p style="margin-top:10px; font-size:14px; color:#aaa;">Creates modern interfaces with strong user‑experience and accessibility focus.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2 class="section-title">Contact Us</h2>
+    <p style="text-align:center; font-size:18px;">Email: <b>support@nlrgroup.com</b></p>
+  </section>
+
+  <!-- SOCIAL MEDIA FULL WIDTH BAR -->
+  <section style="width:100%; padding:40px 0; background:rgba(255,255,255,0.03); border-top:1px solid rgba(255,255,255,0.12); backdrop-filter:blur(8px); text-align:center;">
+    <h2 style="font-size:30px; font-weight:800; text-align:center; color:var(--neon-blue); text-shadow:0 0 15px var(--neon-blue); margin-bottom:25px;">Follow Us On Social Media</h2>
+
+    <div style="display:flex; justify-content:center; gap:70px; padding:40px 60px; background:rgba(0,0,0,0.35); width:fit-content; margin:auto; border-radius:20px; border:1px solid rgba(255,255,255,0.1); box-shadow:0 0 20px rgba(0,0,0,0.4); backdrop-filter:blur(10px);">
+      <a href="https://www.instagram.com/nlrgroupofcompany">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" style="width:55px; filter:drop-shadow(0 0 15px var(--neon-pink));">
+      </a>
+      <a href="https://t.me/nlrgroupofcompany">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" style="width:55px; filter:drop-shadow(0 0 15px var(--neon-blue));">
+      </a>
+      <a href="#">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968830.png" style="width:55px; filter:drop-shadow(0 0 15px var(--neon-purple));">
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 NLR Group of Companies — All Rights Reserved</p>
+    
+  </footer>
+
+<script>
+  /* Typing Effect */
+  const text = "Today's Decision, Tomorrow's Future";
+  let i = 0;
+  function type() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(type, 70);
+    }
+  }
+  type();
+
+  /* Fade-in Scroll Animation */
+  const sections = document.querySelectorAll('section');
+  function reveal() {
+    sections.forEach(sec => {
+      const top = sec.getBoundingClientRect().top;
+      if (top < window.innerHeight - 100) sec.classList.add('visible');
+    });
+  }
+  window.addEventListener('scroll', reveal);
+  reveal();
+
+  /* Animated Background Bubbles */
+  const bg = document.getElementById('bg-animation');
+  for (let j = 0; j < 35; j++) {
+    const c = document.createElement('div');
+    c.classList.add('circle');
+    c.style.left = Math.random()*100 + 'vw';
+    c.style.animationDuration = (5 + Math.random()*10) + 's';
+    c.style.opacity = Math.random();
+    bg.appendChild(c);
+  }
+</script>
+
+</body>
+</html>
